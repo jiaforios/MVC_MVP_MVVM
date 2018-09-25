@@ -21,6 +21,17 @@
  
  */
 
+
+
+/*
+ 
+ 该MVP 模式不够合理
+ P 中应该只处理数据逻辑
+ 
+ 应该类似 MVVM 不过没有 监听方案，可以值返回处理
+ 
+ */
+
 #import "ViewController.h"
 #import "ShopPresenter.h"
 #import "OtherShopPresenter.h"

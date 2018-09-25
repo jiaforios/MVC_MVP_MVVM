@@ -7,39 +7,24 @@
 //
 
 #import "ShopViewModel.h"
-#import "ShopView.h"
 #import "Shop.h"
 
-@interface ShopViewModel ()<ShopViewDelegate>
+@interface ShopViewModel ()
 @property(nonatomic, copy) NSString *shopName;
 @property(nonatomic, copy) NSString *shopDesc;
 @end
 
 @implementation ShopViewModel
 
-- (instancetype)initWithController:(UIViewController *)controller{
-    if (self = [super init]) {
-        ShopView *sv = [[ShopView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
-        sv.delegate = self;
-        sv.sModel = self;
-        
-        Shop *shop = [Shop new];
-        shop.shopName = @"name";
-        shop.shopDesc = @"desc";
-        
-        self.shopName = shop.shopName;
-        self.shopDesc = shop.shopDesc;
-        
-        [controller.view addSubview:sv];
-        
-    }
+- (void)getData{
     
-    return self;
+    Shop *shop = [Shop new];
+    shop.shopName = @"name";
+    shop.shopDesc = @"desc";
+    
+    self.shopName = shop.shopName;
+    self.shopDesc = shop.shopDesc;
+    // 本地或网络
 }
 
-
--(void)didClick:(ShopView *)shopView{
-    
-    NSLog(@"ShopViewModel did click");
-}
 @end

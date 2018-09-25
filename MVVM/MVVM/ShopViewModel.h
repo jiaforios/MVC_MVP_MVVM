@@ -12,7 +12,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ShopViewModel : NSObject
-- (instancetype)initWithController:(UIViewController *)controller;
+
+
+- (void)getData;
 
 @end
 

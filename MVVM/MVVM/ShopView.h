@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ShopView : UIView
 
 @property(nonatomic, weak) id<ShopViewDelegate> delegate;
-@property(nonatomic, weak) ShopViewModel *sModel;
+@property(nonatomic, strong) ShopViewModel *sModel;
 
 
 @end
